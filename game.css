@@ -1,0 +1,134 @@
+body {
+  background: white;
+  overflow: hidden;
+  font-family: 'Montserrat';
+}
+
+.show {
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity 250ms;
+}
+
+#score-bar {
+  position: absolute;
+  width: 100vw;
+  height: 500px;
+  display: none;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+#score-bar h2 {
+  font-family: 'Montserrat';
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+button {
+  font-family: 'Montserrat';
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  background-color: white;
+  border: 3px solid black;
+  text-align: center;
+  padding: 20px 40px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  display: inline;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+#retry-btn {
+  margin-top: 8vh;
+  margin-bottom: 4vh;
+}
+
+#game {
+  background-color: black;
+  width: 100vw;
+  height: 500px;
+  margin: auto;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#block {
+  width: 50px;
+  height: 500px;
+  background-color: white;
+  position: relative;
+  left: calc(100vw - 50px);
+  animation: block 3s infinite linear;
+}
+
+#hole {
+  width: 50px;
+  height: 150px;
+  background-color: black;
+  position: relative;
+  left: calc(100vw - 50px);
+  top: -500px;
+  animation: block 3s infinite linear;
+}
+
+#character {
+  width: 20px;
+  height: 20px;
+  background-color: #55ACEE;
+  position: absolute;
+  top: 100px;
+  border-radius: 50%;
+}
+
+#game-bar {
+  background-color: white;
+  height: calc(100vh - 500px);
+  width: 100vw;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#game-bar h1 {
+  font-family: 'Montserrat';
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+#game-bar span {
+  font-family: 'Montserrat';
+  font-size: 1rem;
+  font-weight: 600;
+  color: #55ACEE;
+  float: right;
+}
+
+#game-bar p {
+  font-family: 'Montserrat';
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-top: 5vh;
+}
+
+@keyframes block {
+  0% {
+    left: calc(100vw - 50px)
+  }
+  100% {
+    left: -50px
+  }
+}
